@@ -1,4 +1,5 @@
 # AI Powered Weather Monitoring
 
-![Weather Monitoring Flow](weather_monitoring_flow.png)
+![Weather Monitoring Flow](weather_monitor_flow.svg)
+
  
