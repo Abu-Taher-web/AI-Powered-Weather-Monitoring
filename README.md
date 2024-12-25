@@ -1,157 +1,188 @@
-# AI Powered Weather Monitoring
+# AI Powered Weather Monitoring 🌤️🤖
 
-## Overview
-This repository contains the implementation of an AI-powered weather monitoring system using Raspberry Pi Pico W. It includes real-time data sensing, processing, and visualization pipelines, integrating IoT and AI/ML for advanced analytics and anomaly detection.
+## Overview 📊
+This repository contains the implementation of an AI-powered weather monitoring system using Raspberry Pi Pico W. It includes real-time data sensing, processing, and visualization pipelines, integrating IoT and AI/ML for advanced analytics and anomaly detection. 🌍📡
 
----
-
-## Circuit Diagram
-
-<div align="center">
-  <img src="images/circuit_diagram.jpg1" alt="Circuit Diagram" height="400">
-  <p><i>Circuit Diagram for the AI Powered Weather Monitoring System.</i></p>
-</div>
 
 ---
 
-## Pipeline
+## Pipeline 🛠️🔄
 
 <div align="center">
   <img src="images/weather_monitor_flow.svg" alt="Weather Monitoring Flow" height="400">
-  <p><i>Figure 1: Weather Monitoring Flow</i></p>
+  <p><i>Figure 1: Weather Monitoring System Pipeline</i></p>
 </div>
 
 ---
 
-## YouTube Video Demo
+## Circuit Diagram 📡🔌
+<div align="center">
+  <img src="images/circuit_diagram1.jpg" alt="Circuit Diagram" height="auto" width="70%">
+  <p><i>Figure 2: Circuit Diagram for the AI-Powered Weather Monitoring System.</i></p>
+</div>
+<div align="center">
+  <img src="Pin Configurateion/dht22_and_bmp280_pin_configuration.png" alt="Circuit Diagram 2" width="70%">
+  <p><i>Figure 3: Pin Configuration of AI-Powered Weather Monitoring System. </i></p>
+</div>
+
+---
+
+
+## 🎬 YouTube Video Demo
 
 <div align="center">
   <a href="https://youtu.be/hyS4sfDcfvg?si=e11aTrE80sh_ykmr">
-    <img src="https://img.youtube.com/vi/hyS4sfDcfvg/0.jpg" alt="AI Powered Weather Monitoring" width="600">
+    <img src="https://img.youtube.com/vi/hyS4sfDcfvg/0.jpg" alt="AI-Powered Weather Monitoring" width="600">
   </a>
-  <p><i>Click to watch the AI Powered Weather Monitoring demo on YouTube.</i></p>
+  <p><I>Click on the thumbnails or https://youtu.be/hyS4sfDcfvg?si=e11aTrE80sh_ykmr to watch the AI Powered Weather Monitoring demo on YouTube. </i></p>
 </div>
 
 ---
 
-## How to Use This Repository
+## How to Use This Repository 🛠️📖
 
-### Prerequisites
+### Prerequisites 📝
 Before using this repository, you should be familiar with:
-- Reading sensor data with Raspberry Pi Pico W
-- Setting up Wi-Fi, HiveMQ, Node-RED, InfluxDB, Grafana, and Google Colab
-- Implementing AI/ML models like SVM, Random Forest, and K-Means Clustering
+- Reading sensor data with Raspberry Pi Pico W 🧑‍💻
+- Setting up Wi-Fi, HiveMQ, Node-RED, InfluxDB, Grafana, and Google Colab 🌐
+- Implementing AI/ML models like SVM, Random Forest, and K-Means Clustering 🧠
 
-If you are new to any of these, [Follow this link](https://github.com/Abu-Taher-web/Internet_of_Things_all_Exercise_code.git) for step-by-step exercises. You can learn these concepts in approximately two days.
+If you are new to any of these, [Follow this link](https://github.com/Abu-Taher-web/Internet_of_Things_all_Exercise_code) for step-by-step exercises. You can learn these concepts in approximately two days. ⏳
 
-### Instructions
 
-#### 1. Setting Up Raspberry Pi Pico W
-1. **Download Thonny**: Install the Thonny IDE from [Thonny's website](https://thonny.org/).
+
+### Instructions 📜
+
+#### 1. Setting Up Raspberry Pi Pico W 🖥️
+1. **Download Thonny**: Install the Thonny IDE from Thonny's website.
 2. **Connect Pico W**:
    - Press and hold the BOOTSEL button on your Pico W.
    - Connect it to your computer while keeping the button pressed.
-   - Your Pico W should appear as USB storage.
+   - Your Pico W should appear as USB storage. 💾
 3. **Install Firmware**:
    - Download this repository to your PC.
    - Navigate to the `Firmware` directory and locate `RPI_PICO_W-20231005-v1.21.0.uf2`.
    - Copy and paste it onto your Pico W.
-   - Disconnect and reconnect your Pico W.
+   - Disconnect and reconnect your Pico W. 🔄
 4. **Setup Thonny**:
-   - Restart Thonny. If connected properly, the console should display the help() message. ![Thonny Console Placeholder](thonny_console_placeholder.png)
+   - Restart Thonny. If connected properly, the console should display the help() message. ✅
 
-#### 2. Deploying Code
+#### 2. Deploying Code 📂
 1. Navigate to the `Code for Pico W` folder.
 2. Open each `.py` file in Thonny.
-3. Save each file directly to your Pico W by selecting **File > Save As** and choosing the Pico W device. 
+3. Save each file directly to your Pico W by selecting **File > Save As** and choosing the Pico W device. 💻
 
-#### 3. Running HiveMQ
+#### 3. Running HiveMQ 🌐
 1. Locate the `hivemq_v3.py` file.
 2. Run the file in Thonny.
-3. The console will display real-time sensor data.
+3. The console will display real-time sensor data. 📈
 <div align="center">
   <img src="images/console_data.png" alt="Console Data" height="400">
-  <p><i>Figure 2: Console Data Placeholder</i></p>
+  <p><i>Figure 4: Console Data From Thonny</i></p>
 </div>
 
-#### 4. Visualizing Data
+#### 4. Visualizing Data 📊
+
 1. **HiveMQ**: Log in to your HiveMQ dashboard to verify incoming data.
-   - **Security**: Utilized SSL/TLS protocols to encrypt data.
-   - **Incoming Data**: HiveMQ dashboard displaying data in real-time.
+   - **Security**: Utilized SSL/TLS protocols to encrypt data 🔐.
+   - **Incoming Data**: HiveMQ dashboard displaying data in real-time. 🕹️
 <div align="center">
   <img src="images/hivemq.png" alt="HiveMQ" height="400">
-  <p><i>Figure 3: HiveMQ Placeholder</i></p>
+  <p><i>Figure 5: HiveMQ Messages</i></p>
 </div>
 
-2. **Node-RED**: Check the debug window for data in JSON format.
+2. **Node-RED**: Check the debug window for data in JSON format. 📡
 <div align="center">
   <img src="images/node-red.png" alt="Node-RED" height="400">
-  <p><i>Figure 4: Node-RED Placeholder</i></p>
+  <p><i>Figure 6: Node-RED Flows</i></p>
 </div>
 
-6. **InfluxDB**: View incoming data in the InfluxDB instance.
+6. **InfluxDB**: View incoming data in the InfluxDB instance. 📊
 <div align="center">
   <img src="images/influxdb.png" alt="InfluxDB" height="400">
-  <p><i>Figure 5: InfluxDB Placeholder</i></p>
+  <p><i>Figure 7: InfluxDB Time Series Database</i></p>
 </div>
 
 7. **Grafana**:
    - Configure the dashboard using queries generated by InfluxDB.
-   - Set up email alerts for abnormal conditions.
+   - Set up email alerts for abnormal conditions. 📩
 <div align="center">
   <img src="images/grafana.png" alt="Grafana Dashboard" height="400">
-  <p><i>Figure 6: Grafana Dashboard Placeholder</i></p>
+  <p><i>Figure 8: Grafana Dashboard</i></p>
 </div>
 
-#### 5. Running the AI Model
+#### 5. Running the AI Model 🤖
 1. Navigate to the `Code For Colab` folder.
 2. Upload the model and `.ipynb` file to Google Colab.
-3. Provide your credentials and run the notebook.
-4. The Random Forest model will classify data in real-time as `normal` or `abnormal`.
+3. Provide your credentials and run the notebook. 🧑‍💻
+4. The Random Forest model will classify data in real-time as `normal` or `abnormal`. 📉
 
 ---
 
-## Machine Learning Model
+## Machine Learning Model 🧠
 
-### Data Collection
-- **Normal Data**: Recorded at room temperature.
-- **Abnormal Data**: Recorded while blowing air on the sensor.
+### Data Collection 📊
+- **Normal Data**: Recorded at room temperature 🌡️.
+- **Abnormal Data**: Recorded while blowing air on the sensor 💨.
+
+<div align="center">
 
 | Data Type      | Training Split | Testing Split |
 |----------------|----------------|---------------|
 | Normal Data    | 80%            | 20%           |
 | Abnormal Data  | 80%            | 20%           |
 
-### Training and Testing
+</div>
+
+### Training and Testing 🧑‍🏫
+
 1. Merged normal and abnormal datasets to create `X_train` and `X_test`.
 2. Tested multiple models:
    - K-Means Clustering
    - Isolation Forest
-   - Random Forest (Best Performance)
-3. **Random Forest Results**:
-   - **Accuracy**: 100% on the test dataset.
-   - **Evaluation Metrics**:
-<div align="center">
-  <img src="random_forest_model/confusion_matrix.png" alt="Confusion Matrix" height="400">
-  <p><i>Figure 7: Confusion Matrix Placeholder</i></p>
-</div>
-![Classification Report Placeholder](classification_report_placeholder.png)
+   - Random Forest (Best Performance) 🏆
 
-### Model Features
-- Architecture
+3. **Random Forest Results**:
+   - **Accuracy**: 100% on the test dataset. ✅
+   - **Evaluation Metrics**:
+   - **Confusion Matrix**:
+<div align="center">
+  <img src="random_forest_model/confusion_matrix.png" alt="Confusion Matrix" height="350">
+  <p><i>Figure 9: Confusion Matrix</i></p>
+</div>
+
+   - **Classification Report**:
+<div align="center">
+
+|              | Precision | Recall | F1-Score | Support |
+|--------------|-----------|--------|----------|---------|
+| **0 (normal)** | 1.00      | 1.00   | 1.00     | 9       |
+| **1 (abnormal)** | 1.00      | 1.00   | 1.00     | 11      |
+| **Accuracy** |           |        | 1.00     | 20      |
+| **Macro Avg** | 1.00      | 1.00   | 1.00     | 20      |
+| **Weighted Avg** | 1.00  | 1.00   | 1.00     | 20      |
+
+</div>
+
+### Model Features 🔧
+- Architecture 🏗️
 <div align="center">
   <img src="random_forest_model/decision_tree.png" alt="Decision Tree" height="400">
-  <p><i>Figure 8: Decision Tree Architecture</i></p>
+  <p><i>Figure 10: Decision Tree Architecture</i></p>
 </div>
-- Hyperparameters
+
+- Hyperparameters ⚙️
 <div align="center">
-  <img src="random_forest_model/hyperparameters_table.png" alt="Hyperparameters Table" height="400">
-  <p><i>Figure 9: Hyperparameters Table</i></p>
+  <img src="random_forest_model/hyperparameters_table.png" alt="Hyperparameters Table" height="300">
+  <p><i>Figure 11: Hyperparameters Table</i></p>
 </div>
-- Most Important Features
+
+- Most Important Features 🔑
 <div align="center">
   <img src="random_forest_model/feature_importances.png" alt="Feature Importances" height="400">
-  <p><i>Figure 10: Feature Importances</i></p>
+  <p><i>Figure 12: Feature Importances</i></p>
 </div>
 
 ---
+
+🚀 **Announcement:** Edge AI implementation using C/C++ is coming! 
