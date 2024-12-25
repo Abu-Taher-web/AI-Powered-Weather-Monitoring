@@ -53,10 +53,10 @@ def on_message(topic, msg):
             led.value(0)
             print("LED OFF (control topic)")
     elif topic == b"anomaly/detection":
-        if msg == b"Anomaly detected!":  # Turn LED ON (Anomaly detected)
+        if msg == -1:  # Turn LED ON (Anomaly detected)
             led.on()
             print("LED ON (anomaly detected)")
-        elif msg == b"Normal data.":  # Turn LED OFF (Normal data)
+        elif msg == 1:  # Turn LED OFF (Normal data)
             led.off()
             print("LED OFF (normal data)")
 
